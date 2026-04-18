@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Riya Thasli K - Data Analyst Portfolio | Computer Science Engineer | Computer Vision &amp; Machine Learning Specialist">
+    <title>Riya Thasli K | Data Analyst &amp; Engineer</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bg-zinc-950 text-white font-sans overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-cyan-400 to-violet-500 rounded-2xl flex items-center justify-center text-xl font-bold">RT</div>
+                <h1 class="text-2xl font-semibold tracking-tight">Riya Thasli K</h1>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-10 text-sm uppercase tracking-widest font-medium">
+                <a href="#about" onclick="smoothScrollTo('about')" class="hover:text-cyan-400 transition-colors">About</a>
+                <a href="#skills" onclick="smoothScrollTo('skills')" class="hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#experience" onclick="smoothScrollTo('experience')" class="hover:text-cyan-400 transition-colors">Experience</a>
+                <a href="#projects" onclick="smoothScrollTo('projects')" class="hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#education" onclick="smoothScrollTo('education')" class="hover:text-cyan-400 transition-colors">Education</a>
+                <a href="#contact" onclick="smoothScrollTo('contact')" class="hover:text-cyan-400 transition-colors">Contact</a>
+            </div>
+
+            <!-- Resume Button -->
+            <a href="/static/files/Riya_Thasli_K_Resume_.pdf" 
+               download="Riya_Thasli_K_Resume.pdf"
+               class="flex items-center gap-2 px-6 py-3 bg-white text-zinc-900 rounded-3xl font-semibold text-sm hover:bg-cyan-400 hover:text-white transition-all duration-300 group">
+                <i class="fa-solid fa-download"></i>
+                <span>Download CV</span>
+                <span class="text-xs opacity-50 group-hover:opacity-100">PDF</span>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-white/10 px-6 py-6">
+            <div class="flex flex-col gap-6 text-lg">
+                <a href="#about" onclick="smoothScrollTo('about');toggleMobileMenu()" class="hover:text-cyan-400">About</a>
+                <a href="#skills" onclick="smoothScrollTo('skills');toggleMobileMenu()" class="hover:text-cyan-400">Skills</a>
+                <a href="#experience" onclick="smoothScrollTo('experience');toggleMobileMenu()" class="hover:text-cyan-400">Experience</a>
+                <a href="#projects" onclick="smoothScrollTo('projects');toggleMobileMenu()" class="hover:text-cyan-400">Projects</a>
+                <a href="#education" onclick="smoothScrollTo('education');toggleMobileMenu()" class="hover:text-cyan-400">Education &amp; Certifications</a>
+                <a href="#contact" onclick="smoothScrollTo('contact');toggleMobileMenu()" class="hover:text-cyan-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="min-h-screen flex items-center pt-20 bg-gradient-to-br from-zinc-950 via-zinc-900 to-black relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-white/10 text-white text-sm px-5 py-2 rounded-3xl backdrop-blur-md border border-white/20">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-400"></span>
+                    </span>
+                    Open to Data Analyst roles • Bangalore / Remote
+                </div>
+
+                <h1 id="hero-name" class="hero-text text-6xl md:text-7xl font-bold leading-none tracking-tighter">
+                    Riya Thasli K
+                </h1>
+                
+                <p class="hero-text text-3xl md:text-4xl text-cyan-400 font-light">
+                    Data Analyst • Computer Vision Engineer • Web Developer
+                </p>
+
+                <p class="hero-text max-w-lg text-lg text-zinc-400">
+                    Passionate Computer Science Engineering student turning raw data into actionable insights. 
+                    Experienced in Python, Power BI, Computer Vision, and building data-driven web solutions.
+                </p>
+
+                <div class="flex items-center gap-4">
+                    <a href="#projects" 
+                       onclick="smoothScrollTo('projects')"
+                       class="px-8 py-4 bg-cyan-400 hover:bg-cyan-300 text-zinc-950 font-semibold rounded-3xl flex items-center gap-3 transition-all hover:scale-105">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        View My Projects
+                    </a>
+                    
+                    <a href="#contact" 
+                       onclick="smoothScrollTo('contact')"
+                       class="px-8 py-4 border border-white/30 hover:border-cyan-400 rounded-3xl flex items-center gap-3 transition-all hover:scale-105">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Let's Connect
+                    </a>
+                </div>
+
+                <!-- Trust signals -->
+                <div class="flex items-center gap-8 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-linkedin text-cyan-400"></i>
+                        <a href="https://linkedin.com/in/riya-thasli-k" target="_blank" class="hover:text-cyan-400">LinkedIn</a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-github text-cyan-400"></i>
+                        <a href="https://github.com/riyathaslik" target="_blank" class="hover:text-cyan-400">GitHub</a>
+                    </div>
+                    <div class="text-zinc-500">•</div>
+                    <div class="flex items-center gap-1 text-emerald-400">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span class="font-medium">Available for internships &amp; freelance</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Visual -->
+            <div class="relative flex justify-center">
+                <div class="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-cyan-400/10 to-violet-500/10 rounded-[4rem] rotate-6 flex items-center justify-center border border-white/10 shadow-2xl">
+                    <div class="text-center space-y-6 -rotate-6">
+                        <div class="mx-auto w-32 h-32 bg-white/5 backdrop-blur-xl rounded-3xl flex items-center justify-center border border-white/20">
+                            <div class="text-7xl">📊</div>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-semibold">Data that tells a story</p>
+                            <p class="text-zinc-400 text-sm">Computer Vision • ML • Business Intelligence</p>
+                        </div>
+                        
+                        <!-- Mini dashboard mock -->
+                        <div class="bg-white/5 backdrop-blur-xl rounded-3xl p-4 text-left text-xs max-w-[220px] mx-auto border border-white/10">
+                            <div class="flex justify-between mb-3">
+                                <span class="text-cyan-400">Q1 Revenue</span>
+                                <span class="font-mono">↑ 30%</span>
+                            </div>
+                            <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                                <div class="h-2 w-4/5 bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+                            </div>
+                            <p class="text-[10px] text-zinc-400 mt-4">Last analyzed with Python + Power BI</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Floating badges -->
+                <div class="absolute -top-6 -left-6 bg-white/10 backdrop-blur-md text-xs px-4 py-2 rounded-2xl border border-white/20 flex items-center gap-2 shadow-xl">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>TensorFlow • Keras</span>
+                </div>
+                <div class="absolute -bottom-8 right-8 bg-white/10 backdrop-blur-md text-xs px-4 py-2 rounded-2xl border border-white/20 flex items-center gap-2 shadow-xl">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Power BI • DAX</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-12 left-1/2 flex flex-col items-center gap-2 text-xs tracking-widest text-zinc-400">
+            <div class="animate-bounce">SCROLL FOR INSIGHTS ↓</div>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-5">
+                    <h2 class="text-5xl font-semibold tracking-tighter mb-6">Hi, I'm Riya 👋</h2>
+                    <p class="text-lg text-zinc-300 leading-relaxed">
+                        I'm a final-year Computer Science Engineering student with a strong passion for 
+                        <span class="text-cyan-400">Data Analytics, Computer Vision, and Machine Learning</span>. 
+                        I've gained real-world experience through internships at Tata Industries and InLighnX, 
+                        where I worked with large-scale image datasets and delivered insights that improved accuracy by 30%.
+                    </p>
+                    <p class="text-lg text-zinc-300 leading-relaxed mt-6">
+                        Currently building a national-level youth data management portal for Saudi Arabia as a freelance web developer.
+                        I love turning complex data into clear, actionable stories using Python, Power BI, and modern web technologies.
+                    </p>
+                    
+                    <div class="mt-10 flex gap-6">
+                        <div>
+                            <div class="text-cyan-400 text-sm font-medium">CURRENT FOCUS</div>
+                            <div class="text-2xl font-semibold">Computer Vision + Business Intelligence</div>
+                        </div>
+                        <div class="h-12 w-px bg-white/10"></div>
+                        <div>
+                            <div class="text-cyan-400 text-sm font-medium">BASED IN</div>
+                            <div class="text-2xl font-semibold">Malappuram, Kerala • Open to Bangalore &amp; Remote</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7 bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10">
+                    <h3 class="uppercase text-sm tracking-widest mb-6 text-zinc-400">What drives me</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="flex gap-4">
+                            <div class="text-4xl">📈</div>
+                            <div>
+                                <div class="font-semibold">Data-Driven Decisions</div>
+                                <div class="text-sm text-zinc-400">Transforming raw data into strategic insights</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-4xl">👁️</div>
+                            <div>
+                                <div class="font-semibold">Computer Vision</div>
+                                <div class="text-sm text-zinc-400">Building intelligent systems with Ultralytics &amp; OpenCV</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-4xl">🌐</div>
+                            <div>
+                                <div class="font-semibold">Scalable Web Solutions</div>
+                                <div class="text-sm text-zinc-400">Full-stack data portals with Supabase &amp; Render</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-baseline mb-12">
+                <h2 class="text-5xl font-semibold tracking-tighter">Technical Toolkit</h2>
+                <span class="text-cyan-400 text-sm uppercase tracking-widest font-medium flex items-center gap-2">
+                    <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+                    Actively using in 2026
+                </span>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Languages -->
+                <div class="bg-white/5 rounded-3xl p-8 border border-white/10 hover:border-cyan-400/30 transition-colors">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-code text-2xl text-cyan-400"></i>
+                        <h3 class="uppercase text-sm font-semibold tracking-widest">Languages</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Python</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">SQL</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">JavaScript</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">HTML / CSS</span>
+                    </div>
+                </div>
+
+                <!-- Libraries -->
+                <div class="bg-white/5 rounded-3xl p-8 border border-white/10 hover:border-cyan-400/30 transition-colors">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-cube text-2xl text-violet-400"></i>
+                        <h3 class="uppercase text-sm font-semibold tracking-widest">Libraries &amp; Frameworks</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">TensorFlow</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Keras</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Pandas</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">NumPy</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">OpenCV</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Ultralytics</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="bg-white/5 rounded-3xl p-8 border border-white/10 hover:border-cyan-400/30 transition-colors">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-toolbox text-2xl text-emerald-400"></i>
+                        <h3 class="uppercase text-sm font-semibold tracking-widest">Tools &amp; Platforms</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Power BI</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">MySQL Workbench</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">pgAdmin4</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Supabase</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Render</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Google Analytics 4</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Google Tag Manager</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">LabelImg • GIMP</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Jupyter • VS Code</span>
+                    </div>
+                </div>
+
+                <!-- Interests -->
+                <div class="bg-white/5 rounded-3xl p-8 border border-white/10 hover:border-cyan-400/30 transition-colors">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-lightbulb text-2xl text-amber-400"></i>
+                        <h3 class="uppercase text-sm font-semibold tracking-widest">Core Interests</h3>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between"><span>Data Analytics</span><span class="text-emerald-400">●●●●●</span></div>
+                        <div class="flex justify-between"><span>Database Management</span><span class="text-emerald-400">●●●●●</span></div>
+                        <div class="flex justify-between"><span>Computer Vision</span><span class="text-emerald-400">●●●●●</span></div>
+                        <div class="flex justify-between"><span>Machine Learning</span><span class="text-emerald-400">●●●●●</span></div>
+                        <div class="flex justify-between"><span>Web Development</span><span class="text-emerald-400">●●●●●</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-semibold tracking-tighter mb-16">Professional Experience</h2>
+            
+            <div class="space-y-16 relative before:absolute before:left-8 before:top-6 before:bottom-6 before:w-px before:bg-gradient-to-b before:from-transparent before:via-cyan-400/30 before:to-transparent">
+                
+                <!-- Tata Internship -->
+                <div class="grid md:grid-cols-12 gap-8 relative">
+                    <div class="md:col-span-3">
+                        <div class="sticky top-8">
+                            <div class="text-cyan-400 text-sm font-medium">Oct 2025 — Apr 2026</div>
+                            <div class="text-xl font-semibold">Data Analyst Intern</div>
+                            <div class="text-zinc-400">Tata Insights and Quants, Tata Industries Pvt. Ltd.</div>
+                            <div class="text-xs text-emerald-400 mt-1">Bangalore • Full-time</div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-9 bg-white/5 border border-white/10 rounded-3xl p-8 space-y-6">
+                        <ul class="space-y-4 text-zinc-300">
+                            <li class="flex gap-3"><i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i> Annotated and preprocessed large image datasets using LabelImg and GIMP, ensuring high-quality inputs for a real-world Computer Vision deep learning project.</li>
+                            <li class="flex gap-3"><i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i> Leveraged Google Analytics 4 and Google Tag Manager to track webpage performance, analyze user behavior, and support data-driven decisions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Freelance -->
+                <div class="grid md:grid-cols-12 gap-8 relative">
+                    <div class="md:col-span-3">
+                        <div class="sticky top-8">
+                            <div class="text-cyan-400 text-sm font-medium">Present</div>
+                            <div class="text-xl font-semibold">Freelance Web Developer</div>
+                            <div class="text-zinc-400">Independent</div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-9 bg-white/5 border border-white/10 rounded-3xl p-8 space-y-6">
+                        <p class="text-zinc-300">Built and deployed a national-level web portal for youth data management in Saudi Arabia using Supabase, Render, HTML, CSS, and JavaScript with role-based access control and centralized database architecture.</p>
+                    </div>
+                </div>
+
+                <!-- InLighnX Internship -->
+                <div class="grid md:grid-cols-12 gap-8 relative">
+                    <div class="md:col-span-3">
+                        <div class="sticky top-8">
+                            <div class="text-cyan-400 text-sm font-medium">Jun 2025 — Jul 2025</div>
+                            <div class="text-xl font-semibold">Data Analyst Intern</div>
+                            <div class="text-zinc-400">InLighnX Global Pvt. Ltd.</div>
+                            <div class="text-xs text-emerald-400 mt-1">Remote</div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-9 bg-white/5 border border-white/10 rounded-3xl p-8 space-y-6">
+                        <ul class="space-y-4 text-zinc-300">
+                            <li class="flex gap-3"><i class="fa-solid fa-circle-check text-cyan-400 mt-1"></i> Analyzed raw datasets using Excel and Python; delivered actionable insights through data visualization, improving data accuracy by <span class="font-semibold text-emerald-400">30%</span>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Industrial Training -->
+                <div class="grid md:grid-cols-12 gap-8 relative">
+                    <div class="md:col-span-3">
+                        <div class="sticky top-8">
+                            <div class="text-cyan-400 text-sm font-medium">Jul 2024</div>
+                            <div class="text-xl font-semibold">Industrial Training — Python, ML &amp; AI</div>
+                            <div class="text-zinc-400">Maitexa</div>
+                            <div class="text-xs text-emerald-400 mt-1">Calicut • 5-day intensive</div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-9 bg-white/5 border border-white/10 rounded-3xl p-8 space-y-6">
+                        <p class="text-zinc-300">Completed intensive program and built ML models including linear regression and conducted histogram-based analysis using Python.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-semibold tracking-tighter mb-6">Featured Projects</h2>
+            <p class="text-zinc-400 mb-12 max-w-md">Real-world data solutions that combine analysis, visualization, and machine learning.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Walmart -->
+                <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/30 transition-all">
+                    <div class="h-2 bg-gradient-to-r from-cyan-400 to-violet-500"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between mb-6">
+                            <span class="px-4 py-1 bg-white/10 text-xs rounded-3xl">Python • Time-Series</span>
+                            <span class="text-xs text-zinc-400">Sales Forecasting</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">Walmart Sales Analysis</h3>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-8">Analysed weekly sales data from 45 stores, engineered time-series features using Python, and quantified correlation between sales and economic indicators like CPI and unemployment.</p>
+                        <div class="flex items-center justify-between text-xs uppercase">
+                            <span class="flex items-center gap-1"><i class="fa-solid fa-chart-line"></i> Predictive Insights</span>
+                            <span class="text-emerald-400">Delivered correlation report</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amazon -->
+                <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/30 transition-all">
+                    <div class="h-2 bg-gradient-to-r from-violet-400 to-emerald-400"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between mb-6">
+                            <span class="px-4 py-1 bg-white/10 text-xs rounded-3xl">Excel • Power Query</span>
+                            <span class="text-xs text-zinc-400">Business Intelligence</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">Amazon Sales Dashboard 2024</h3>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-8">Transformed raw transactional data into actionable Business Intelligence using an interactive Excel dashboard with pivot tables, visualizing monthly revenue and top-selling products.</p>
+                        <div class="flex items-center justify-between text-xs uppercase">
+                            <span class="flex items-center gap-1"><i class="fa-solid fa-table"></i> Interactive Dashboard</span>
+                            <span class="text-emerald-400">Real-time KPI tracking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Voice Chatbot -->
+                <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/30 transition-all">
+                    <div class="h-2 bg-gradient-to-r from-amber-400 to-cyan-400"></div>
+                    <div class="p-8">
+                        <div class="flex justify-between mb-6">
+                            <span class="px-4 py-1 bg-white/10 text-xs rounded-3xl">Python • AI</span>
+                            <span class="text-xs text-zinc-400">Voice AI</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">Voice-Activated AI Chatbot</h3>
+                        <p class="text-zinc-300 text-sm leading-relaxed mb-8">Developed a Python voice-activated AI chatbot using speech_recognition, pyttsx3, and Wikipedia API for web searches and system commands, achieving <span class="font-semibold">90%+ accuracy</span> in speech recognition.</p>
+                        <div class="flex items-center justify-between text-xs uppercase">
+                            <span class="flex items-center gap-1"><i class="fa-solid fa-microphone"></i> Speech Recognition</span>
+                            <span class="text-emerald-400">Production-ready prototype</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Dashboard -->
+                <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/30 transition-all lg:col-span-3 md:col-span-2">
+                    <div class="h-2 bg-gradient-to-r from-emerald-400 to-cyan-400"></div>
+                    <div class="p-8 flex flex-col md:flex-row gap-8">
+                        <div class="md:w-2/3">
+                            <div class="flex justify-between mb-6">
+                                <span class="px-4 py-1 bg-white/10 text-xs rounded-3xl">Power BI • DAX</span>
+                                <span class="text-xs text-zinc-400">Sales Intelligence</span>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">Pizza Sales Report Dashboard</h3>
+                            <p class="text-zinc-300 text-sm leading-relaxed">Built an interactive Power BI dashboard leveraging DAX measures and Power Query to visualize key sales metrics like revenue and top-selling products for data-driven decision-making.</p>
+                        </div>
+                        <div class="md:w-1/3 flex items-end">
+                            <div class="text-xs font-medium bg-white/10 px-6 py-3 rounded-3xl flex-1 text-center">Fully interactive • Real-time filters</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section id="education" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20">
+                <!-- Education -->
+                <div>
+                    <h2 class="text-5xl font-semibold tracking-tighter mb-12">Education</h2>
+                    <div class="space-y-10">
+                        <div>
+                            <div class="text-sm text-cyan-400">Oct 2022 — Present</div>
+                            <div class="text-2xl font-semibold">Bachelor of Technology — Computer Science and Engineering</div>
+                            <div class="text-zinc-400">KMCT IETM, Calicut, Kerala</div>
+                            <div class="mt-2 text-emerald-400">CGPA: 6.38</div>
+                        </div>
+                        
+                        <div>
+                            <div class="text-sm text-cyan-400">2022</div>
+                            <div class="text-2xl font-semibold">Class XII — Kerala Board of Higher Secondary Examination</div>
+                            <div class="text-zinc-400">P P M H S S Kottukkara, Malappuram, Kerala</div>
+                            <div class="mt-2 text-emerald-400">Score: 91.58%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div>
+                    <h2 class="text-5xl font-semibold tracking-tighter mb-12">Certifications</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-6 border-l-4 border-cyan-400 pl-6">
+                            <div class="flex-1">
+                                <div class="font-semibold">Certificate in Programming in Python</div>
+                                <div class="text-sm text-zinc-400">SWAYAM • Elite Score: 87%</div>
+                            </div>
+                            <div class="text-right text-xs text-emerald-400">May 2025</div>
+                        </div>
+                        
+                        <div class="flex gap-6 border-l-4 border-cyan-400 pl-6">
+                            <div class="flex-1">
+                                <div class="font-semibold">Hands-On AI: Computer Vision Projects with Ultralytics and OpenCV</div>
+                                <div class="text-sm text-zinc-400">LinkedIn Learning</div>
+                            </div>
+                            <div class="text-right text-xs text-emerald-400">Nov 2025</div>
+                        </div>
+                        
+                        <div class="flex gap-6 border-l-4 border-cyan-400 pl-6">
+                            <div class="flex-1">
+                                <div class="font-semibold">Online Python Bootcamp</div>
+                                <div class="text-sm text-zinc-400">3-day intensive workshop</div>
+                            </div>
+                            <div class="text-right text-xs text-emerald-400">Sep 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOFT SKILLS & LANGUAGES -->
+    <section class="py-20 bg-zinc-900 border-t border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="uppercase tracking-widest text-sm mb-6 text-zinc-400">Soft Skills</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-6 py-3 bg-white/10 rounded-3xl text-sm">Active Listening</span>
+                        <span class="px-6 py-3 bg-white/10 rounded-3xl text-sm">Collaboration</span>
+                        <span class="px-6 py-3 bg-white/10 rounded-3xl text-sm">Communication</span>
+                        <span class="px-6 py-3 bg-white/10 rounded-3xl text-sm">Initiative</span>
+                        <span class="px-6 py-3 bg-white/10 rounded-3xl text-sm">Adaptability</span>
+                        <span class="px-6 py-3 bg-white/10 rounded-3xl text-sm">Time Management</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="uppercase tracking-widest text-sm mb-6 text-zinc-400">Languages</h3>
+                    <div class="flex items-center gap-12 text-2xl">
+                        <div>🇬🇧 English <span class="text-xs block text-emerald-400">Fluent</span></div>
+                        <div>🇮🇳 Malayalam <span class="text-xs block text-emerald-400">Native</span></div>
+                        <div>🇮🇳 Tamil <span class="text-xs block text-emerald-400">Conversational</span></div>
+                    </div>
+                </div>
+                
+                <div class="text-center md:text-left">
+                    <div class="inline-block bg-gradient-to-r from-cyan-400 to-violet-500 text-zinc-950 font-semibold px-8 py-6 rounded-3xl text-lg">
+                        Ready to bring data to life in your next project
+                    </div>
+                    <p class="text-xs text-zinc-400 mt-6">+91 8330070481 • riyathasli6954@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="rounded-3xl bg-gradient-to-br from-zinc-900 to-black border border-white/10 p-12 md:p-16 flex flex-col md:flex-row gap-16 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-5xl font-semibold tracking-tighter mb-8">Let's turn data into impact</h2>
+                    <p class="text-xl text-zinc-300 mb-8">Whether you're looking for a data analyst, a computer vision collaborator, or a web developer who understands data pipelines — I'm just one message away.</p>
+                    
+                    <div class="flex flex-col gap-6">
+                        <a href="mailto:riyathasli6954@gmail.com" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-cyan-400 group-hover:text-zinc-950 transition-all">✉️</div>
+                            <div>
+                                <div class="font-medium">Email me</div>
+                                <div class="text-cyan-400">riyathasli6954@gmail.com</div>
+                            </div>
+                        </a>
+                        
+                        <a href="tel:+918330070481" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-cyan-400 group-hover:text-zinc-950 transition-all">📱</div>
+                            <div>
+                                <div class="font-medium">Call or WhatsApp</div>
+                                <div class="text-cyan-400">+91 8330070481</div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://linkedin.com/in/riya-thasli-k" target="_blank" class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-2xl group-hover:bg-cyan-400 group-hover:text-zinc-950 transition-all">🔗</div>
+                            <div>
+                                <div class="font-medium">Connect on LinkedIn</div>
+                                <div class="text-cyan-400">@riya-thasli-k</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Simple form -->
+                <div class="md:w-1/2 bg-white/5 rounded-3xl p-8">
+                    <form onsubmit="handleSubmit(event)" class="space-y-6">
+                        <input type="text" id="name" placeholder="Your name" 
+                               class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-5 focus:outline-none focus:border-cyan-400 placeholder:text-zinc-400">
+                        
+                        <input type="email" id="email" placeholder="Your email" 
+                               class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-5 focus:outline-none focus:border-cyan-400 placeholder:text-zinc-400">
+                        
+                        <textarea id="message" rows="4" placeholder="Your message (e.g., internship opportunity, collaboration, or feedback on my resume)" 
+                                  class="w-full bg-white/10 border border-white/20 rounded-3xl px-6 py-5 focus:outline-none focus:border-cyan-400 placeholder:text-zinc-400 resize-none"></textarea>
+                        
+                        <button type="submit" 
+                                class="w-full py-6 bg-cyan-400 hover:bg-white text-zinc-950 font-semibold rounded-3xl flex items-center justify-center gap-3 transition-all">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-zinc-400 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>© 2026 Riya Thasli K • Built as a Data Analyst Portfolio</div>
+            <div class="flex gap-6">
+                <a href="https://github.com/riyathaslik" target="_blank" class="hover:text-white">GitHub</a>
+                <a href="https://linkedin.com/in/riya-thasli-k" target="_blank" class="hover:text-white">LinkedIn</a>
+                <a href="/static/files/Riya_Thasli_K_Resume_.pdf" download class="hover:text-white">Resume PDF</a>
+            </div>
+            <div>Made with ❤️ for data storytelling</div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

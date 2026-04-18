@@ -1,0 +1,16 @@
+/* static/css/style.css */
+/* Custom Tailwind overrides + GSAP-friendly styles */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-text {
+    opacity: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+/* Tailwind script will be initialized in JS */
