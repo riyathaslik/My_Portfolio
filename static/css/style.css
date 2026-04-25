@@ -11,6 +11,28 @@
 
 body {
     scroll-behavior: smooth;
+    
+}
+/* Smooth Hover for Cards */
+.project-card {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
 }
 
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+/* Custom Scrollbar for Modal */
+#modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+#modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* Glassmorphism background for active cards */
+.bg-zinc-950\/90 {
+    backdrop-filter: blur(20px) saturate(180%);
+}
 /* Tailwind script will be initialized in JS */

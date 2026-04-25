@@ -180,7 +180,7 @@
                         I'm a final-year Computer Science Engineering student with a strong passion for 
                         <span class="text-cyan-400">Data Analytics, Computer Vision, and Machine Learning</span>. 
                         I've gained real-world experience through internships at Tata Industries and InLighnX, 
-                        where I worked with large-scale image datasets and delivered insights that improved accuracy by 30%.
+                        where I worked with large-scale datasets.
                     </p>
                     <p class="text-lg text-zinc-300 leading-relaxed mt-6">
                         Currently building a national-level youth data management portal for Saudi Arabia as a freelance web developer.
@@ -190,12 +190,12 @@
                     <div class="mt-10 flex gap-6">
                         <div>
                             <div class="text-cyan-400 text-sm font-medium">CURRENT FOCUS</div>
-                            <div class="text-2xl font-semibold">Computer Vision + Business Intelligence</div>
+                            <div class="text-2xl font-semibold">Computer Vision and Data Management</div>
                         </div>
                         <div class="h-12 w-px bg-white/10"></div>
                         <div>
                             <div class="text-cyan-400 text-sm font-medium">BASED IN</div>
-                            <div class="text-2xl font-semibold">Malappuram, Kerala • Open to Bangalore &amp; Remote</div>
+                            <div class="text-2xl font-semibold">Malappuram, Kerala     • Open to Bangalore &amp; Remote</div>
                         </div>
                     </div>
                 </div>
@@ -382,85 +382,122 @@
             </div>
         </div>
     </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-semibold tracking-tighter mb-6">Featured Projects</h2>
-            <p class="text-zinc-400 mb-12 max-w-md">Real-world data solutions that combine analysis, visualization, and machine learning.</p>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Walmart -->
-                <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/30 transition-all">
-                    <div class="h-2 bg-gradient-to-r from-cyan-400 to-violet-500"></div>
-                    <div class="p-8">
-                        <div class="flex justify-between mb-6">
-                            <span class="px-4 py-1 bg-white/10 text-xs rounded-3xl">Python • Time-Series</span>
-                            <span class="text-xs text-zinc-400">Sales Forecasting</span>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">Walmart Sales Analysis</h3>
-                        <p class="text-zinc-300 text-sm leading-relaxed mb-8">Analysed weekly sales data from 45 stores, engineered time-series features using Python, and quantified correlation between sales and economic indicators like CPI and unemployment.</p>
-                        <div class="flex items-center justify-between text-xs uppercase">
-                            <span class="flex items-center gap-1"><i class="fa-solid fa-chart-line"></i> Predictive Insights</span>
-                            <span class="text-emerald-400">Delivered correlation report</span>
-                        </div>
-                    </div>
+<section id="projects" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-6xl font-bold tracking-tighter mb-4">Featured Projects</h2>
+        <p class="text-zinc-400 mb-16 max-w-xl text-lg">Real-world data solutions that combine analysis, visualization, and machine learning.</p>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="project-card group relative bg-zinc-950 border border-white/10 rounded-[2.5rem] overflow-hidden cursor-pointer hover:border-cyan-400/50 transition-all duration-500" 
+                 onclick="openProject('walmart')">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="static\files\Walmart-Case-Study-StartupTalky.jpg" alt="Walmart Analysis" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
                 </div>
-
-                <!-- Amazon -->
-                <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/30 transition-all">
-                    <div class="h-2 bg-gradient-to-r from-violet-400 to-emerald-400"></div>
-                    <div class="p-8">
-                        <div class="flex justify-between mb-6">
-                            <span class="px-4 py-1 bg-white/10 text-xs rounded-3xl">Excel • Power Query</span>
-                            <span class="text-xs text-zinc-400">Business Intelligence</span>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">Amazon Sales Dashboard 2024</h3>
-                        <p class="text-zinc-300 text-sm leading-relaxed mb-8">Transformed raw transactional data into actionable Business Intelligence using an interactive Excel dashboard with pivot tables, visualizing monthly revenue and top-selling products.</p>
-                        <div class="flex items-center justify-between text-xs uppercase">
-                            <span class="flex items-center gap-1"><i class="fa-solid fa-table"></i> Interactive Dashboard</span>
-                            <span class="text-emerald-400">Real-time KPI tracking</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Voice Chatbot -->
-                <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/30 transition-all">
-                    <div class="h-2 bg-gradient-to-r from-amber-400 to-cyan-400"></div>
-                    <div class="p-8">
-                        <div class="flex justify-between mb-6">
-                            <span class="px-4 py-1 bg-white/10 text-xs rounded-3xl">Python • AI</span>
-                            <span class="text-xs text-zinc-400">Voice AI</span>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">Voice-Activated AI Chatbot</h3>
-                        <p class="text-zinc-300 text-sm leading-relaxed mb-8">Developed a Python voice-activated AI chatbot using speech_recognition, pyttsx3, and Wikipedia API for web searches and system commands, achieving <span class="font-semibold">90%+ accuracy</span> in speech recognition.</p>
-                        <div class="flex items-center justify-between text-xs uppercase">
-                            <span class="flex items-center gap-1"><i class="fa-solid fa-microphone"></i> Speech Recognition</span>
-                            <span class="text-emerald-400">Production-ready prototype</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pizza Dashboard -->
-                <div class="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-cyan-400/30 transition-all lg:col-span-3 md:col-span-2">
-                    <div class="h-2 bg-gradient-to-r from-emerald-400 to-cyan-400"></div>
-                    <div class="p-8 flex flex-col md:flex-row gap-8">
-                        <div class="md:w-2/3">
-                            <div class="flex justify-between mb-6">
-                                <span class="px-4 py-1 bg-white/10 text-xs rounded-3xl">Power BI • DAX</span>
-                                <span class="text-xs text-zinc-400">Sales Intelligence</span>
-                            </div>
-                            <h3 class="text-2xl font-semibold mb-3 group-hover:text-cyan-400 transition-colors">Pizza Sales Report Dashboard</h3>
-                            <p class="text-zinc-300 text-sm leading-relaxed">Built an interactive Power BI dashboard leveraging DAX measures and Power Query to visualize key sales metrics like revenue and top-selling products for data-driven decision-making.</p>
-                        </div>
-                        <div class="md:w-1/3 flex items-end">
-                            <div class="text-xs font-medium bg-white/10 px-6 py-3 rounded-3xl flex-1 text-center">Fully interactive • Real-time filters</div>
-                        </div>
+                <div class="p-8 -mt-12 relative">
+                    <span class="px-4 py-1 bg-cyan-400 text-zinc-950 text-xs font-bold rounded-full uppercase">Python • Time-Series</span>
+                    <h3 class="text-3xl font-bold mt-4 mb-2">Walmart Sales</h3>
+                    <p class="text-zinc-400 line-clamp-2">Quantifying economic correlations and time-series forecasting.</p>
+                    <div class="mt-6 flex items-center text-cyan-400 font-semibold gap-2">
+                        View Details <i class="fa-solid fa-arrow-right text-xs"></i>
                     </div>
                 </div>
             </div>
+
+            <div class="project-card group relative bg-zinc-950 border border-white/10 rounded-[2.5rem] overflow-hidden cursor-pointer hover:border-violet-400/50 transition-all duration-500" 
+                 onclick="openProject('amazon')">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="static\files\620184_95e8.jpg" alt="Amazon Sales" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-8 -mt-12 relative">
+                    <span class="px-4 py-1 bg-violet-400 text-zinc-950 text-xs font-bold rounded-full uppercase">Excel • BI</span>
+                    <h3 class="text-3xl font-bold mt-4 mb-2">Amazon Dashboard</h3>
+                    <p class="text-zinc-400 line-clamp-2">Interactive Business Intelligence using Pivot Tables and Power Query.</p>
+                    <div class="mt-6 flex items-center text-violet-400 font-semibold gap-2">
+                        View Details <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group relative bg-zinc-950 border border-white/10 rounded-[2.5rem] overflow-hidden cursor-pointer hover:border-amber-400/50 transition-all duration-500" 
+                 onclick="openProject('chatbot')">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="static\files\Voice-Activated-AI-Chatbots-compressed.png" alt="AI Chatbot" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-8 -mt-12 relative">
+                    <span class="px-4 py-1 bg-amber-400 text-zinc-950 text-xs font-bold rounded-full uppercase">Python • AI</span>
+                    <h3 class="text-3xl font-bold mt-4 mb-2">Voice AI Chatbot</h3>
+                    <p class="text-zinc-400 line-clamp-2">90%+ accuracy in speech recognition and Wikipedia API integration.</p>
+                    <div class="mt-6 flex items-center text-amber-400 font-semibold gap-2">
+                        View Details <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </div>
+            </div>
+  <div class="project-card group relative bg-zinc-950 border border-white/10 rounded-[2.5rem] overflow-hidden cursor-pointer hover:border-violet-400/50 transition-all duration-500" 
+                 onclick="openProject('pizza')">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="static\files\1694736293921.png" alt="Pizza Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                </div>
+                <div class="p-8 -mt-12 relative">
+                    <span class="px-4 py-1 bg-violet-400 text-zinc-950 text-xs font-bold rounded-full uppercase">Excel • BI</span>
+                    <h3 class="text-3xl font-bold mt-4 mb-2">Pizza Sales Intelligence</h3>
+                    <p class="text-zinc-400 line-clamp-2">A full-scale Power BI deployment leveraging DAX for real-time KPI tracking and interactive filtering.</p>
+                    <div class="mt-6 flex items-center text-violet-400 font-semibold gap-2">
+                        View Details <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card group relative bg-zinc-950 border border-white/10 rounded-[2.5rem] overflow-hidden cursor-pointer hover:border-emerald-400/50 transition-all duration-500" 
+     onclick="openProject('crop-ai')">
+    <div class="h-64 overflow-hidden relative">
+        <img src="static\files\1_CUjbLtX-FeWfT6D06ebziA.jpg" alt="AI Crop Diagnosis" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60">
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+    </div>
+    <div class="p-8 -mt-12 relative">
+        <span class="px-4 py-1 bg-emerald-400 text-zinc-950 text-xs font-bold rounded-full uppercase">AI • IoT • Computer Vision</span>
+        <h3 class="text-3xl font-bold mt-4 mb-2 line-clamp-1">AI Crop Diagnosis System</h3>
+        <p class="text-zinc-400 line-clamp-2">Smart farming system using CNNs and IoT sensors for real-time disease detection and treatment.</p>
+        <div class="mt-6 flex items-center text-emerald-400 font-semibold gap-2">
+            View Details <i class="fa-solid fa-arrow-right text-xs"></i>
         </div>
-    </section>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+<div id="project-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 md:p-10">
+    <div class="absolute inset-0 bg-zinc-950/90 backdrop-blur-3xl" onclick="closeProject()"></div>
+    
+    <div id="modal-content" class="relative w-full max-w-6xl bg-zinc-900 border border-white/10 rounded-[3rem] overflow-hidden shadow-2xl opacity-0 translate-y-20">
+        <button onclick="closeProject()" class="absolute top-8 right-8 z-10 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center backdrop-blur-md transition-all">
+            <i class="fa-solid fa-xmark text-xl text-white"></i>
+        </button>
+
+        <div class="grid md:grid-cols-2 h-[85vh] overflow-y-auto md:overflow-hidden">
+            <div id="modal-image-container" class="h-64 md:h-full bg-zinc-800 relative">
+                <img id="modal-image" src="" alt="Project Visual" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-zinc-900 hidden md:block"></div>
+            </div>
+            
+            <div class="p-8 md:p-16 overflow-y-auto space-y-8">
+                <div id="modal-tags" class="flex flex-wrap gap-2"></div>
+                <h2 id="modal-title" class="text-5xl font-bold tracking-tighter text-white"></h2>
+                <div id="modal-description" class="text-zinc-300 text-lg leading-relaxed space-y-6">
+                    </div>
+                
+                <div class="pt-10 border-t border-white/10 flex flex-wrap gap-4">
+                    <a href="#" id="modal-link" target="_blank" class="px-8 py-4 bg-white text-zinc-900 font-bold rounded-2xl hover:bg-cyan-400 hover:text-white transition-all shadow-lg">
+                        View Repository <i class="fa-brands fa-github ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- EDUCATION & CERTIFICATIONS -->
     <section id="education" class="py-24">

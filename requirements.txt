@@ -1,0 +1,18 @@
+# Web Framework & Server
+Flask==3.0.3
+Flask-Cors==4.0.1
+Jinja2==3.1.4
+Werkzeug==3.0.3
+gunicorn==22.0.0
+
+# Environment & API
+python-dotenv==1.0.1
+requests==2.32.3
+
+# Data Analytics & Machine Learning
+# (Essential for your CNN and Crop Diagnosis models)
+numpy==1.26.4
+pandas==2.2.2
+tensorflow==2.15.0
+opencv-python-headless==4.9.0.80
+ultralytics==8.2.0
