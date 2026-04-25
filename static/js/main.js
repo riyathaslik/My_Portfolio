@@ -156,7 +156,7 @@ const projectData = {
     title: "AI Diagnosis & Treatment Recommendation System for Crops",
     tags: ["TensorFlow", "Keras", "IoT", "CNN", "OpenCV"],
     image: "static\files\1_CUjbLtX-FeWfT6D06ebziA.jpg", // Ensure this matches the HTML img src
-    repo: "https://github.com/riyathaslik",
+    repo: " https://riyathaslik.github.io/Agri-Iot/",
     description: `
         <p>I developed an AI-powered system designed to identify crop diseases with high precision. By utilizing <strong>CNN architectures like ResNet/MobileNet</strong>, the model achieved over <strong>90% prediction accuracy</strong> on complex plant leaf datasets.</p>
         
