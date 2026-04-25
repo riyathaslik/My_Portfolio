@@ -114,86 +114,83 @@ function handleSubmit(e) {
 const projectData = {
     'walmart': {
         title: "Walmart Sales Analysis",
-        tags: ["Python", "Pandas", "Time-Series", "Matplotlib"],
-        image: "static\files\Walmart-Case-Study-StartupTalky.jpg",
-        repo: " https://riyathaslik.github.io/Walmart-Sales-Analysis/",
+        tags: ["Python", "Time-Series", "Pandas", "Matplotlib"],
+        image: "static/files/Walmart-Case-Study-StartupTalky.jpg",
+        repo: "https://github.com/riyathaslik/Walmart-Sales-Analysis",
         description: `
-            <p>I analyzed weekly sales data from 45 Walmart stores to identify key economic drivers. This project involved extensive feature engineering to account for seasonality and holidays.</p>
-            <p><strong>Impact:</strong> Successfully quantified the correlation between sales and economic indicators like CPI and unemployment. I used Python's visualization libraries to create clear trend reports for stakeholders.</p>
+            <p>I engineered a time-series analysis of weekly sales data from 45 Walmart stores to identify macro-economic revenue drivers.</p>
+            <p><strong>Impact:</strong> I quantified the correlation between sales and indicators like CPI and unemployment, using Python to generate strategic trend reports for stakeholders.</p>
         `
     },
     'amazon': {
-        title: "Amazon Sales Dashboard 2024",
-        tags: ["Excel", "Power Query", "Pivot Tables", "Business Intelligence"],
-        image: "static\files\620184_95e8.jpg",
-        repo: " https://riyathaslik.github.io/Amazon-Sales/",
+        title: "Amazon Sales Analysis 2024",
+        tags: ["Excel", "Power Query", "Pivot Tables", "BI"],
+        image: "static/files/620184_95e8.jpg",
+        repo: "https://github.com/riyathaslik/Amazon-Sales",
         description: `
-            <p>Transformed raw transactional data into a fully interactive Business Intelligence tool. I used Power Query for ETL (Extract, Transform, Load) to clean over 10,000+ rows of data.</p>
-            <p><strong>Features:</strong> The dashboard visualizes monthly revenue growth, identifies top-selling products, and tracks customer demographics for better inventory management.</p>
+            <p>I transformed raw transactional data into an interactive BI tool using Power Query and Pivot Tables.</p>
+            <p><strong>Features:</strong> The dashboard visualizes monthly revenue growth and identifies top-selling products to optimize inventory management.</p>
         `
     },
     'chatbot': {
-        title: "Voice-Activated AI Chatbot",
-        tags: ["Python", "Speech Recognition", "Wikipedia API", "AI"],
-        image: "static\files\Voice-Activated-AI-Chatbots-compressed.png",
-        repo: "https://riyathaslik.github.io/Voice-Activated-AI-Chatbot/",
+        title: "Voice-Activated AI Assistant",
+        tags: ["Python", "NLP", "Speech Recognition", "AI"],
+        image: "static/files/Voice-Activated-AI-Chatbots-compressed.png",
+        repo: "https://github.com/riyathaslik/Voice-Activated-AI-Chatbot",
         description: `
-            <p>Developed a voice-driven AI assistant using <code>speech_recognition</code> and <code>pyttsx3</code>. It performs system commands, web searches, and answers general queries through Wikipedia integration.</p>
-            <p><strong>Accuracy:</strong> Achieved a 90%+ recognition rate in diverse acoustic environments. It showcases my ability to bridge the gap between AI models and real-world utility.</p>
+            <p>Developed a Python-based AI assistant using <code>speech_recognition</code> and <code>pyttsx3</code> that achieves 90%+ accuracy.</p>
+            <p><strong>Capabilities:</strong> It executes system commands and real-time Wikipedia searches through voice-driven Natural Language Processing.</p>
         `
     },
     'pizza': {
-        title: "Pizza Sales Report Dashboard",
+        title: "Pizza Sales Intelligence Dashboard",
         tags: ["Power BI", "DAX", "SQL", "Data Modeling"],
-        image: "static\files\1716196277228.png",
-        repo: "https://riyathaslik.github.io/Pizza-Sales-Report-End-to-End-Dashboard/",
+        image: "static/files/1694736293921.png",
+        repo: "https://github.com/riyathaslik/Pizza-Sales-Report-End-to-End-Dashboard",
         description: `
-            <p>A flagship Business Intelligence project. I built an end-to-end data pipeline from a SQL database into Power BI. I leveraged advanced DAX measures to calculate Year-over-Year (YoY) growth and average order values.</p>
-            <p><strong>Interactive Elements:</strong> The dashboard includes dynamic slicers and drill-through features that allow users to explore data at a granular store level.</p>
+            <p>Built an end-to-end Power BI pipeline leveraging advanced DAX measures to track real-time sales KPIs[cite: 39, 40].</p>
+            <p><strong>Interactive Elements:</strong> Includes dynamic slicers for Year-over-Year (YoY) growth and average order value tracking.</p>
         `
     },
     'crop-ai': {
-    title: "AI Diagnosis & Treatment Recommendation System for Crops",
-    tags: ["TensorFlow", "Keras", "IoT", "CNN", "OpenCV"],
-    image: "static\files\1_CUjbLtX-FeWfT6D06ebziA.jpg", // Ensure this matches the HTML img src
-    repo: " https://riyathaslik.github.io/Agri-Iot/",
-    description: `
-        <p>I developed an AI-powered system designed to identify crop diseases with high precision. By utilizing <strong>CNN architectures like ResNet/MobileNet</strong>, the model achieved over <strong>90% prediction accuracy</strong> on complex plant leaf datasets.</p>
-        
-        <p><strong>Smart Farming Integration:</strong> Beyond simple diagnosis, I integrated IoT sensors to track soil moisture, temperature, and humidity. Combined with real-time weather APIs, the system provides personalized treatment recommendations, significantly improving decision-making efficiency for farmers.</p>
-        
-        <p>This project showcases my ability to combine <strong>Computer Vision</strong> with real-world sensor data for actionable Business Intelligence.</p>
-    `
-}
+        title: "Smart-Agri: AI Crop Detection, Diagnosis & IoT System",
+        tags: ["TensorFlow", "CNN", "IoT", "Computer Vision"],
+        image: "static/files/1_CUjbLtX-FeWfT6D06ebziA.jpg",
+        repo: "https://github.com/riyathaslik/Agri-Iot",
+        description: `
+            <p>I developed a deep learning system using CNN architectures like ResNet to detect and diagnose crop diseases with 90%+ accuracy.</p>
+            <p><strong>IoT Integration:</strong> The system combines real-time sensor data (soil moisture, humidity) with weather APIs to provide personalized treatment recommendations.</p>
+        `
+    }
 };
 
 // MODAL CONTROLS
-function openProject(id) {
-    const data = projectData[id];
-    if (!data) return;
+function openProject(projectId) {
+    const project = projectData[projectId];
+    if (!project) return;
 
-    // Update Modal Content
-    document.getElementById('modal-title').innerText = data.title;
-    document.getElementById('modal-image').src = data.image;
-    document.getElementById('modal-description').innerHTML = data.description;
-    document.getElementById('modal-link').href = data.repo;
-    
-    // Inject Tags
+    // 1. Set the Title and Description
+    document.getElementById('modal-title').innerText = project.title;
+    document.getElementById('modal-description').innerHTML = project.description;
+
+    // 2. Set the Image (CRITICAL: ensure path uses / not \)
+    const modalImg = document.getElementById('modal-image');
+    modalImg.src = project.image.replace(/\\/g, '/'); // This auto-fixes backslashes!
+
+    // 3. Set the Repository Link (CRITICAL: .trim() removes leading spaces)
+    const modalLink = document.getElementById('modal-link');
+    modalLink.href = project.repo.trim(); 
+
+    // 4. Handle Tags
     const tagsContainer = document.getElementById('modal-tags');
-    tagsContainer.innerHTML = data.tags.map(tag => 
-        `<span class="px-4 py-2 bg-white/5 border border-white/10 text-white text-xs rounded-xl">${tag}</span>`
+    tagsContainer.innerHTML = project.tags.map(tag => 
+        `<span class="px-4 py-1 bg-white/10 text-white text-xs font-bold rounded-full uppercase">${tag}</span>`
     ).join('');
 
-    // GSAP Entry Animation
+    // 5. Show the modal (GSAP Animation)
     const modal = document.getElementById('project-modal');
     modal.classList.remove('hidden');
-    
-    gsap.to('#modal-content', {
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        ease: "back.out(1.2)"
-    });
+    gsap.to('#modal-content', { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" });
 }
 
 function closeProject() {
