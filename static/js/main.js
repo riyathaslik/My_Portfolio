@@ -148,7 +148,7 @@ const projectData = {
         image: "static/files/1694736293921.png",
         repo: "https://github.com/riyathaslik/Pizza-Sales-Report-End-to-End-Dashboard",
         description: `
-            <p>Built an end-to-end Power BI pipeline leveraging advanced DAX measures to track real-time sales KPIs[cite: 39, 40].</p>
+            <p>Built an end-to-end Power BI pipeline leveraging advanced DAX measures to track real-time sales KPIs.</p>
             <p><strong>Interactive Elements:</strong> Includes dynamic slicers for Year-over-Year (YoY) growth and average order value tracking.</p>
         `
     },
