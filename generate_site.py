@@ -130,24 +130,24 @@ def build_html():
 </head>
 <body>
 
-<section class="hero">
-    <canvas id="diveCanvas"></canvas>
-    <div class="hero-content container">
-        {hero_photo_html()}
-        <div class="eyebrow">Data Analytics Portfolio</div>
-        <h1>{PROFILE['name']}</h1>
-        <div class="role">{PROFILE['title']}</div>
-        <div class="tagline">{PROFILE['tagline']}</div>
-        <div class="hero-contact">{''.join(contact_bits)}</div>
-    </div>
-    <div class="scroll-cue">Scroll to dive in ↓</div>
-</section>
+# <section class="hero">
+#     <canvas id="diveCanvas"></canvas>
+#     <div class="hero-content container">
+#         {hero_photo_html()}
+#         <div class="eyebrow">Data Analytics Portfolio</div>
+#         <h1>{PROFILE['name']}</h1>
+#         <div class="role">{PROFILE['title']}</div>
+#         <div class="tagline">{PROFILE['tagline']}</div>
+#         <div class="hero-contact">{''.join(contact_bits)}</div>
+#     </div>
+#     <div class="scroll-cue">Scroll to dive in ↓</div>
+# </section>
 
-<div class="container">
-    {kpi_html(RESULTS)}
-</div>
+# <div class="container">
+#     {kpi_html(RESULTS)}
+# </div>
 
-<div class="container">
+# <div class="container">
 
     <section class="section reveal">
         <div class="section-head"><div class="eyebrow">01 · Overview</div><h2>Executive Summary</h2></div>
@@ -208,7 +208,7 @@ def build_html():
 
 </div>
 
-<footer>© {PROFILE['name']} · Built with Python — free & static, hosted for $0</footer>
+<footer>© {PROFILE['name']} · 2026</footer>
 
 <script src="script.js"></script>
 </body>
