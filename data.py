@@ -14,8 +14,8 @@ PROFILE = {
     "location": "Kerala, India",
     "email": "riyathasli6954@gmail.com",
     "phone": "+91 8330070481",
-    "linkedin": "#",      # <-- paste your LinkedIn URL
-    "github": "#",        # <-- paste your GitHub URL
+    "linkedin": "https://www.linkedin.com/in/riya-thasli-k",      # <-- paste your LinkedIn URL
+    "github": "https://github.com/riyathaslik",        # <-- paste your GitHub URL
     "portfolio_site": "#",  # <-- paste your live portfolio URL if hosted
     # Put your photo file inside the assets/ folder and reference it here.
     # Example: "assets/profile_photo.jpg"

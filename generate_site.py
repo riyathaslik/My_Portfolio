@@ -140,7 +140,6 @@ def build_html():
         <div class="tagline">{PROFILE['tagline']}</div>
         <div class="hero-contact">{''.join(contact_bits)}</div>
     </div>
-    <div class="scroll-cue">Scroll to dive in ↓</div>
 </section>
 
 <div class="container">
